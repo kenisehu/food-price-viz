@@ -1,4 +1,2 @@
 file,title,publisher,url,retrieved_at,sha256,license_note
-data/raw/zmi2025aa.csv,2025年基準 品目別価格指数 月次（全国）参考値（小数第3位）2025年1月〜,総務省統計局,https://www.stat.go.jp/data/cpi/2025/csv/zmi2025aa.csv,2026-09-13,c69a2bd32b7787403c342b8f8fc0346094fdaf57c1a773f9549e4134e5fe12f0,政府統計（出典を明記して加工利用）
 data/raw/estat_item_index_long.csv,2025年基準 長期時系列データ 品目別価格指数 全国 月次（1970年1月〜最新月）調査年月2026年7月,総務省統計局（e-Stat）,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040482945&fileKind=1,2026-09-13,2e6335c191b459f3446e7f93cf38f4df9814c90371c794aac9d58efa337ee51b,政府統計（出典を明記して加工利用）
-data/raw/estat_item_yoy_long.csv,2025年基準 長期時系列データ 品目別価格指数 前年同月比 全国 月次（1971年1月〜最新月）調査年月2026年7月,総務省統計局（e-Stat）,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040482955&fileKind=1,2026-09-13,4ddaa8874a9819baa4d95acf8799781d17cb0efcee8c9e8da7b9f667958ded3c,政府統計（出典を明記して加工利用）

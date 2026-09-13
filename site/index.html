@@ -3,96 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>食料物価ウォッチ（試作）</title>
+<title>食料の物価指数 | 食料物価ウォッチ（試作）</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="wrap">
-  <p class="eyebrow">試作版 ・ 消費者物価指数（CPI）食料</p>
-  <h1>食料物価ウォッチ</h1>
-  <p class="lede">何の値上がりが、家計の食費をどれだけ押し上げているか。上昇率ではなく<strong>寄与度</strong>（家計に占める重みを掛けた影響）で並べます。</p>
-  <p class="asof" id="asof"></p>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-name" href="#/">食料物価ウォッチ<span>試作</span></a>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="テーマ切替">◐</button>
+  </div>
 </header>
-
-<main class="wrap">
-  <section class="tiles" id="tiles" aria-label="主要な数字"></section>
-
-  <section>
-    <div class="section-head">
-      <h2>食料の値上がりは、どの分野から来ているか</h2>
-      <label class="month-select">対象月
-        <select id="month"></select>
-      </label>
-    </div>
-    <p class="note">中分類ごとの寄与度（ポイント）。合計すると食料全体の前年同月比になります。</p>
-    <div class="chart" id="mid-wrap"><canvas id="mid-chart" role="img" aria-label="中分類別の寄与度"></canvas></div>
-  </section>
-
-  <section>
-    <div class="section-head">
-      <h2>品目ランキング</h2>
-      <div class="seg" role="group" aria-label="並べ方">
-        <button type="button" data-rank="contrib" aria-pressed="true">寄与度で並べる</button>
-        <button type="button" data-rank="yoy" aria-pressed="false">上昇率で並べる</button>
-      </div>
-    </div>
-    <p class="note" id="rank-note"></p>
-    <div class="rank-grid">
-      <div>
-        <h3>押し上げた品目</h3>
-        <div class="chart" id="up-wrap"><canvas id="up-chart" role="img" aria-label="食料物価を押し上げた品目"></canvas></div>
-      </div>
-      <div>
-        <h3>押し下げた品目</h3>
-        <div class="chart" id="down-wrap"><canvas id="down-chart" role="img" aria-label="食料物価を押し下げた品目"></canvas></div>
-      </div>
-    </div>
-    <div class="callout" id="outliers" hidden></div>
-  </section>
-
-  <section>
-    <h2>前年同月比の推移</h2>
-    <div class="legend" id="trend-legend"></div>
-    <div class="chart" style="height:300px"><canvas id="trend-chart" role="img" aria-label="総合と食料の前年同月比の推移"></canvas></div>
-  </section>
-
-  <section>
-    <div class="section-head">
-      <h2>全品目</h2>
-      <input type="search" id="search" placeholder="品目名で探す（例：米、卵、コーヒー）" aria-label="品目名で探す">
-    </div>
-    <p class="note">行をクリックすると、下のグラフにその品目の推移を表示します。▶ で内訳を開閉。※＝月別にウエイトが変わる生鮮品のため寄与度は近似値。</p>
-    <div class="detail">
-      <p class="detail-title" id="detail-title"></p>
-      <div class="chart" style="height:220px"><canvas id="detail-chart" role="img" aria-label="選んだ品目の指数の推移"></canvas></div>
-    </div>
-    <div class="table-wrap">
-      <table id="table">
-        <thead><tr>
-          <th scope="col">品目</th>
-          <th scope="col" class="num">食料内の重み<br><span>（1万分比）</span></th>
-          <th scope="col" class="num">指数<br><span>（2025年=100）</span></th>
-          <th scope="col" class="num">前年同月比</th>
-          <th scope="col" class="num">寄与度<br><span>（食料, pt）</span></th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="method">
-    <h2>データと計算方法</h2>
-    <ul>
-      <li>出典：総務省統計局「消費者物価指数」2025年基準（品目別価格指数の参考値〈小数第3位〉、e-Stat 長期時系列データ）。前年同月比は公表値。</li>
-      <li>寄与度（食料, pt）＝ 品目ウエイト ×（当月指数 − 前年同月指数）÷（食料ウエイト × 食料の前年同月指数）× 100。2025年基準のウエイトを使うため、計算できるのは2026年1月分からです。</li>
-      <li>生鮮魚介・生鮮野菜・生鮮果物は月ごとにウエイトが変わるため、品目別の寄与度は近似値です（中分類の寄与度は正確）。</li>
-      <li>検算：指数から計算した食料の前年同月比と中分類寄与度の合計が、公表値と一致することを毎回確認しています。</li>
-    </ul>
-    <div class="table-wrap"><table id="checks"><thead><tr><th>月</th><th class="num">公表値</th><th class="num">指数から計算</th><th class="num">中分類寄与度の合計</th><th class="num">品目寄与度の合計（近似含む）</th></tr></thead><tbody></tbody></table></div>
-    <p class="note">本サイトは政府統計を加工して作成したもので、内容は国によって保証されたものではありません。正確な数値は原典を確認してください。</p>
-  </section>
+<main class="wrap" id="app" aria-live="polite">
+  <p class="loading">読み込み中…</p>
 </main>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="app.js"></script>
 </body>
