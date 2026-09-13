@@ -111,6 +111,15 @@ td .cat { margin-left: 8px; font-size: 12px; color: var(--muted); }
 .filter-bar button { font: inherit; font-size: 13px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--ink-2); cursor: pointer; }
 .filter-count { margin-left: auto; font-size: 12px; color: var(--muted); }
 
+.news-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 12px; }
+.tag { font-size: 12px; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 1px 10px; }
+.news-list { list-style: none; margin: 0; padding: 0; }
+.news-list li { padding: 10px 16px; border-bottom: 1px solid var(--grid); font-size: 14px; }
+.news-list li:last-child { border-bottom: none; }
+.news-meta { display: block; margin-top: 2px; font-size: 12px; color: var(--muted); }
+.paid { margin-left: 8px; font-size: 11px; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 5px; }
+.news-note { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+
 .siblings { font-size: 14px; line-height: 2; }
 .siblings .dot { color: var(--muted); margin: 0 6px; }
 .site-footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 16px; font-size: 12px; color: var(--muted); }

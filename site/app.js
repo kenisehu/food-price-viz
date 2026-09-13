@@ -3,16 +3,25 @@ const app = document.getElementById("app");
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
-let data, byCode, children, first, latestIdx;
+let data, byCode, children, first, latestIdx, newsByCode;
 let mainChart, navChart;
 
 setupTheme();
 
-fetch("data/cpi_food.json")
-  .then((r) => r.json())
-  .then((json) => {
+// 関連ニュースは任意。読めなくても本体の表示は止めない
+const newsReq = fetch("data/news.json")
+  .then((r) => (r.ok ? r.json() : {}))
+  .catch(() => ({}));
+
+Promise.all([fetch("data/cpi_food.json").then((r) => r.json()), newsReq])
+  .then(([json, news]) => {
     data = json;
     byCode = Object.fromEntries(data.nodes.map((n) => [n.code, n]));
+    newsByCode = {};
+    for (const [id, topic] of Object.entries(news)) {
+      if (id.startsWith("_")) continue;
+      for (const code of topic.codes) newsByCode[code] = topic;
+    }
     children = {};
     for (const n of data.nodes) (children[n.parent] ??= []).push(n);
     first = data.meta.first_month;
@@ -310,6 +319,22 @@ function mountSortable(table) {
 
 // ---------- 品目ページ ----------
 
+function newsSection(n) {
+  const topic = newsByCode[n.code];
+  if (!topic?.news?.length) return "";
+  return `<section class="news">
+    <h2>関連ニュース</h2>
+    ${topic.tags?.length ? `<p class="news-tags">${topic.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</p>` : ""}
+    <ul class="news-list card">${topic.news
+      .map((a) => `<li>
+        <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a>
+        <span class="news-meta">${esc(a.source)} · ${esc(a.date)}${a.paid ? '<span class="paid">有料</span>' : ""}</span>
+      </li>`)
+      .join("")}</ul>
+    <p class="news-note">記事は値動きの背景を知る手がかりとして掲載しています。価格変動の原因を断定するものではありません。</p>
+  </section>`;
+}
+
 function renderItem(n) {
   const anc = ancestors(n);
   const mid = midCategory(n);
@@ -331,6 +356,7 @@ function renderItem(n) {
       ${chartCard()}
     </section>
     ${annualSection(n)}
+    ${newsSection(n)}
     <section>
       <h2>同じカテゴリの品目</h2>
       <p class="siblings">${siblings.map((s) => `<a href="${href(s)}">${esc(s.name)}</a>`).join('<span class="dot">·</span>')}</p>
