@@ -3,15 +3,18 @@ const app = document.getElementById("app");
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
-let data, byCode, children, first, latestIdx;
+let data, byCode, children, first, latestIdx, imports;
 let mainChart, navChart;
 
 setupTheme();
 
-fetch("data/cpi_food.json")
-  .then((r) => r.json())
-  .then((json) => {
+Promise.all([
+  fetch("data/cpi_food.json").then((r) => r.json()),
+  fetch("data/import_sources.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+])
+  .then(([json, importJson]) => {
     data = json;
+    imports = importJson;
     byCode = Object.fromEntries(data.nodes.map((n) => [n.code, n]));
     children = {};
     for (const n of data.nodes) (children[n.parent] ??= []).push(n);
@@ -330,6 +333,7 @@ function renderItem(n) {
       <h2>指数推移</h2>
       ${chartCard()}
     </section>
+    ${importSection(n)}
     ${annualSection(n)}
     <section>
       <h2>同じカテゴリの品目</h2>
@@ -338,6 +342,24 @@ function renderItem(n) {
     ${footer()}
   `;
   mountChart(n);
+}
+
+function importSection(n) {
+  const it = imports?.items[n.code];
+  if (!it) return "";
+  const oku = (thousandYen) => (thousandYen / 1e5).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const others = it.country_count - it.top.length;
+  return `<section>
+    <h2>主な輸入先（${imports.meta.year}年・輸入額ベース）</h2>
+    <div class="card table-card"><table>
+      <thead><tr><th class="num" style="text-align:center">#</th><th>国・地域</th><th class="num">輸入額（億円）</th><th class="num">シェア</th></tr></thead>
+      <tbody>${it.top
+        .map((t, i) => `<tr><td class="rank">${i + 1}</td><td>${esc(t.country)}</td><td class="num">${oku(t.value_thousand_yen)}</td><td class="num">${t.share.toFixed(1)}%</td></tr>`)
+        .join("")}</tbody>
+    </table></div>
+    <p class="page-meta">輸入額の合計 ${oku(it.total_thousand_yen)}億円${others > 0 ? `（ほか${others}か国・地域）` : ""}。対象の貿易統計品目: ${esc(it.hs_description)}${it.note ? `。${esc(it.note)}` : ""}</p>
+    <p class="page-meta">出典: ${esc(imports.meta.source)}</p>
+  </section>`;
 }
 
 // ---------- 指数推移チャート（期間ボタン＋ナビゲーター） ----------
