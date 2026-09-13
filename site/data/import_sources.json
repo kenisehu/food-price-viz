@@ -1,0 +1,372 @@
+{
+ "meta": {
+  "year": 2025,
+  "unit": "千円",
+  "source": "財務省「貿易統計」品別国別表（輸入）2025年1-12月（確々報）"
+ },
+ "items": {
+  "1581": {
+   "hs_prefixes": [
+    "080390"
+   ],
+   "hs_description": "0803.90 バナナ（生鮮・乾燥。プランテンを除く）",
+   "note": "",
+   "total_thousand_yen": 152142961,
+   "country_count": 16,
+   "top": [
+    {
+     "country": "フィリピン",
+     "value_thousand_yen": 115355760,
+     "share": 75.8
+    },
+    {
+     "country": "エクアドル",
+     "value_thousand_yen": 10656846,
+     "share": 7.0
+    },
+    {
+     "country": "メキシコ",
+     "value_thousand_yen": 8244936,
+     "share": 5.4
+    },
+    {
+     "country": "ベトナム",
+     "value_thousand_yen": 6799872,
+     "share": 4.5
+    },
+    {
+     "country": "カンボジア",
+     "value_thousand_yen": 4776021,
+     "share": 3.1
+    }
+   ]
+  },
+  "1922": {
+   "hs_prefixes": [
+    "090111"
+   ],
+   "hs_description": "0901.11 コーヒー（焙煎していないもの・カフェイン未除去）",
+   "note": "CPIのコーヒー豆は焙煎豆だが、国内焙煎が主なので生豆の輸入先を使う（要議論）",
+   "total_thousand_yen": 356554798,
+   "country_count": 50,
+   "top": [
+    {
+     "country": "ブラジル",
+     "value_thousand_yen": 142551664,
+     "share": 40.0
+    },
+    {
+     "country": "ベトナム",
+     "value_thousand_yen": 71721044,
+     "share": 20.1
+    },
+    {
+     "country": "コロンビア",
+     "value_thousand_yen": 45085754,
+     "share": 12.6
+    },
+    {
+     "country": "グアテマラ",
+     "value_thousand_yen": 24285777,
+     "share": 6.8
+    },
+    {
+     "country": "エチオピア",
+     "value_thousand_yen": 15608727,
+     "share": 4.4
+    }
+   ]
+  },
+  "1203": {
+   "hs_prefixes": [
+    "0201",
+    "0202"
+   ],
+   "hs_description": "0201 牛肉（生鮮・冷蔵）／0202 牛肉（冷凍）",
+   "note": "",
+   "total_thousand_yen": 465451059,
+   "country_count": 17,
+   "top": [
+    {
+     "country": "オーストラリア",
+     "value_thousand_yen": 229865041,
+     "share": 49.4
+    },
+    {
+     "country": "アメリカ合衆国",
+     "value_thousand_yen": 167675229,
+     "share": 36.0
+    },
+    {
+     "country": "ニュージーランド",
+     "value_thousand_yen": 26378747,
+     "share": 5.7
+    },
+    {
+     "country": "カナダ",
+     "value_thousand_yen": 26246477,
+     "share": 5.6
+    },
+    {
+     "country": "メキシコ",
+     "value_thousand_yen": 8653316,
+     "share": 1.9
+    }
+   ]
+  },
+  "1214": {
+   "hs_prefixes": [
+    "0203"
+   ],
+   "hs_description": "0203 豚肉（生鮮・冷蔵・冷凍）",
+   "note": "",
+   "total_thousand_yen": 619448151,
+   "country_count": 16,
+   "top": [
+    {
+     "country": "カナダ",
+     "value_thousand_yen": 164561542,
+     "share": 26.6
+    },
+    {
+     "country": "アメリカ合衆国",
+     "value_thousand_yen": 126339755,
+     "share": 20.4
+    },
+    {
+     "country": "スペイン",
+     "value_thousand_yen": 121158838,
+     "share": 19.6
+    },
+    {
+     "country": "メキシコ",
+     "value_thousand_yen": 65409594,
+     "share": 10.6
+    },
+    {
+     "country": "ブラジル",
+     "value_thousand_yen": 62399074,
+     "share": 10.1
+    }
+   ]
+  },
+  "1332": {
+   "hs_prefixes": [
+    "0406"
+   ],
+   "hs_description": "0406 チーズ及びカード",
+   "note": "",
+   "total_thousand_yen": 200887035,
+   "country_count": 42,
+   "top": [
+    {
+     "country": "ニュージーランド",
+     "value_thousand_yen": 45691993,
+     "share": 22.7
+    },
+    {
+     "country": "オーストラリア",
+     "value_thousand_yen": 43747676,
+     "share": 21.8
+    },
+    {
+     "country": "アメリカ合衆国",
+     "value_thousand_yen": 35897109,
+     "share": 17.9
+    },
+    {
+     "country": "イタリア",
+     "value_thousand_yen": 18943136,
+     "share": 9.4
+    },
+    {
+     "country": "オランダ",
+     "value_thousand_yen": 13243130,
+     "share": 6.6
+    }
+   ]
+  },
+  "2042": {
+   "hs_prefixes": [
+    "220410",
+    "220421"
+   ],
+   "hs_description": "2204.10 スパークリングワイン／2204.21 ぶどう酒（2リットル以下の容器入り）",
+   "note": "",
+   "total_thousand_yen": 243280645,
+   "country_count": 63,
+   "top": [
+    {
+     "country": "フランス",
+     "value_thousand_yen": 149026258,
+     "share": 61.3
+    },
+    {
+     "country": "イタリア",
+     "value_thousand_yen": 30738980,
+     "share": 12.6
+    },
+    {
+     "country": "チリ",
+     "value_thousand_yen": 17101500,
+     "share": 7.0
+    },
+    {
+     "country": "アメリカ合衆国",
+     "value_thousand_yen": 16539381,
+     "share": 6.8
+    },
+    {
+     "country": "スペイン",
+     "value_thousand_yen": 14920637,
+     "share": 6.1
+    }
+   ]
+  },
+  "1583": {
+   "hs_prefixes": [
+    "080440"
+   ],
+   "hs_description": "0804.40 アボカド",
+   "note": "",
+   "total_thousand_yen": 22126135,
+   "country_count": 7,
+   "top": [
+    {
+     "country": "メキシコ",
+     "value_thousand_yen": 14185125,
+     "share": 64.1
+    },
+    {
+     "country": "ペルー",
+     "value_thousand_yen": 6947295,
+     "share": 31.4
+    },
+    {
+     "country": "オーストラリア",
+     "value_thousand_yen": 328783,
+     "share": 1.5
+    },
+    {
+     "country": "ニュージーランド",
+     "value_thousand_yen": 294157,
+     "share": 1.3
+    },
+    {
+     "country": "アメリカ合衆国",
+     "value_thousand_yen": 166000,
+     "share": 0.8
+    }
+   ]
+  },
+  "1515": {
+   "hs_prefixes": [
+    "080510"
+   ],
+   "hs_description": "0805.10 オレンジ",
+   "note": "",
+   "total_thousand_yen": 18052485,
+   "country_count": 6,
+   "top": [
+    {
+     "country": "オーストラリア",
+     "value_thousand_yen": 9297320,
+     "share": 51.5
+    },
+    {
+     "country": "アメリカ合衆国",
+     "value_thousand_yen": 8343838,
+     "share": 46.2
+    },
+    {
+     "country": "エジプト",
+     "value_thousand_yen": 221053,
+     "share": 1.2
+    },
+    {
+     "country": "トルコ",
+     "value_thousand_yen": 114171,
+     "share": 0.6
+    },
+    {
+     "country": "南アフリカ共和国",
+     "value_thousand_yen": 59405,
+     "share": 0.3
+    }
+   ]
+  },
+  "1582": {
+   "hs_prefixes": [
+    "081050"
+   ],
+   "hs_description": "0810.50 キウイフルーツ",
+   "note": "",
+   "total_thousand_yen": 62008136,
+   "country_count": 5,
+   "top": [
+    {
+     "country": "ニュージーランド",
+     "value_thousand_yen": 60470936,
+     "share": 97.5
+    },
+    {
+     "country": "アメリカ合衆国",
+     "value_thousand_yen": 740470,
+     "share": 1.2
+    },
+    {
+     "country": "大韓民国",
+     "value_thousand_yen": 424637,
+     "share": 0.7
+    },
+    {
+     "country": "チリ",
+     "value_thousand_yen": 285147,
+     "share": 0.5
+    },
+    {
+     "country": "ジョージア",
+     "value_thousand_yen": 86946,
+     "share": 0.1
+    }
+   ]
+  },
+  "1114": {
+   "hs_prefixes": [
+    "030616",
+    "030617"
+   ],
+   "hs_description": "0306.16 冷水性のえび（冷凍）／0306.17 その他のえび（冷凍）",
+   "note": "CPIのえびは国産も含むため、輸入分の内訳として表示する",
+   "total_thousand_yen": 204761262,
+   "country_count": 38,
+   "top": [
+    {
+     "country": "インド",
+     "value_thousand_yen": 47642447,
+     "share": 23.3
+    },
+    {
+     "country": "ベトナム",
+     "value_thousand_yen": 38773695,
+     "share": 18.9
+    },
+    {
+     "country": "インドネシア",
+     "value_thousand_yen": 33488726,
+     "share": 16.4
+    },
+    {
+     "country": "アルゼンチン",
+     "value_thousand_yen": 21508608,
+     "share": 10.5
+    },
+    {
+     "country": "エクアドル",
+     "value_thousand_yen": 21278432,
+     "share": 10.4
+    }
+   ]
+  }
+ }
+}
