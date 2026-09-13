@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 METHOD = ROOT / "data/raw/mext_school_lunch_fee_method_2025.pdf"
 SURVEY = ROOT / "data/raw/mext_school_lunch_survey_2025.pdf"
-OUT = ROOT / "site/data/school_lunch_fees.json"
+OUT = ROOT / "site/data/school-lunch-fees.json"
 METHOD_URL = "https://www.mext.go.jp/content/20260730-mxt-kenshoku-000051287_02.pdf"
 SURVEY_URL = "https://www.mext.go.jp/content/20260730-mxt-kenshoku-000051287_03.pdf"
 METHOD_TITLE = "学校給食費調査における学校給食費平均月額及び給食回数の全国平均の算出方法の変更について"
