@@ -1,0 +1,332 @@
+{
+  "_meta": {
+    "cpi_base": "2025年基準",
+    "source": "総務省統計局「2025年基準消費者物価指数品目情報一覧」",
+    "note": "codes は CPI の品目符号。国産品・輸入品などは1つの話題にまとめ、同じ記事を表示する。paid: true は本文が会員限定の記事",
+    "updated": "2026-09-13"
+  },
+  "rice": {
+    "label": "米",
+    "codes": [
+      "1001",
+      "1002"
+    ],
+    "tags": [
+      "天候・気候",
+      "生産・供給"
+    ],
+    "news": [
+      {
+        "title": "スーパーのコメ平均価格 5キロ3191円 2週ぶり値下がり",
+        "source": "NHK",
+        "date": "2026-08-21",
+        "url": "https://news.web.nhk/newsweb/na/nd-20260821de45521"
+      },
+      {
+        "title": "【2026年8〜9月米価情報】「相対取引価格」は上昇も、店頭価格は下落か……9月の新米登場でどう変わる？",
+        "source": "SMART AGRI",
+        "date": "2026-08-20",
+        "url": "https://smartagri-jp.com/agriculture/14968"
+      },
+      {
+        "title": "2026年、コメ相場は崩れるのか？令和の米騒動の終わりを読む",
+        "source": "マイナビ農業",
+        "date": "2025-12-19",
+        "url": "https://agri.mynavi.jp/2025_12_19_428712/"
+      }
+    ]
+  },
+  "bread": {
+    "label": "食パン・小麦粉",
+    "codes": [
+      "1021",
+      "1071"
+    ],
+    "tags": [
+      "輸入・為替",
+      "世界相場"
+    ],
+    "news": [
+      {
+        "title": "輸入小麦の政府売渡価格の改定について",
+        "source": "農林水産省",
+        "date": "2026-09-09",
+        "url": "https://www.maff.go.jp/j/press/nousan/boeki/260909.html"
+      },
+      {
+        "title": "【日本】農水省、小麦の政府売渡価格を12%引上げ。気候変動や貿易不安定化、円安の影響",
+        "source": "Sustainable Japan",
+        "date": "2026-09-13",
+        "url": "https://sustainablejapan.jp/2026/09/13/maff-wheat-price/130494"
+      }
+    ]
+  },
+  "noodles": {
+    "label": "カップ麺",
+    "codes": [
+      "1051"
+    ],
+    "tags": [
+      "輸入・為替",
+      "世界相場"
+    ],
+    "news": [
+      {
+        "title": "日清食品、カップヌードルなど170品値上げ 26年4月から5〜11%",
+        "source": "日本経済新聞",
+        "date": "2025-12-03",
+        "url": "https://www.nikkei.com/article/DGXZQOUC037VF0T01C25A2000000/",
+        "paid": true
+      },
+      {
+        "title": "日清食品 4月からカップ麺・袋麺など3年ぶり値上げ 一部袋麺、カップライスは減量",
+        "source": "食品新聞",
+        "date": "2025-12-03",
+        "url": "https://shokuhin.net/135805/2025/12/03/kakou/sokuseki/"
+      }
+    ]
+  },
+  "beef": {
+    "label": "牛肉",
+    "codes": [
+      "1201",
+      "1203"
+    ],
+    "tags": [
+      "輸入・為替",
+      "飼料"
+    ],
+    "news": [
+      {
+        "title": "牛肉価格の上昇、食品の中でも顕著（米国）",
+        "source": "農畜産業振興機構",
+        "date": "2025-10-09",
+        "url": "https://www.alic.go.jp/chosa-c/joho01_004223.html"
+      },
+      {
+        "title": "輸入牛肉が最高値、円安や生産停滞で 牛丼各社値上げも",
+        "source": "日本経済新聞",
+        "date": "2024-03-23",
+        "url": "https://www.nikkei.com/article/DGXZQOUB154500V10C24A3000000/",
+        "paid": true
+      }
+    ]
+  },
+  "pork": {
+    "label": "豚肉",
+    "codes": [
+      "1211",
+      "1214"
+    ],
+    "tags": [
+      "輸入・為替",
+      "感染症"
+    ],
+    "news": [
+      {
+        "title": "輸入豚肉価格「スペイン産停止で高止まり」 日本ハムの稲富氏",
+        "source": "日本経済新聞",
+        "date": "2026-01-22",
+        "url": "https://www.nikkei.com/article/DGXZQOUB194YT0Z10C26A1000000/",
+        "paid": true
+      },
+      {
+        "title": "スペイン、アフリカ豚熱発生、欧州と中国は感染地域のみ輸入停止",
+        "source": "ジェトロ",
+        "date": "2025-12-08",
+        "url": "https://www.jetro.go.jp/biznews/2025/12/a799307b9f82135a.html"
+      },
+      {
+        "title": "スペインからの豚肉等の輸入一時停止措置について",
+        "source": "農林水産省",
+        "date": "2025-11-29",
+        "url": "https://www.maff.go.jp/j/press/syouan/douei/251129.html"
+      }
+    ]
+  },
+  "chicken": {
+    "label": "鶏肉",
+    "codes": [
+      "1221"
+    ],
+    "tags": [
+      "感染症",
+      "輸入・為替"
+    ],
+    "news": [
+      {
+        "title": "輸入鶏肉の卸値5〜6割高 ブラジル・タイ産が品薄、日本は調達難も",
+        "source": "日本経済新聞",
+        "date": "2026-05-19",
+        "url": "https://www.nikkei.com/article/DGXZQOUB012K60R00C26A5000000/",
+        "paid": true
+      }
+    ]
+  },
+  "egg": {
+    "label": "鶏卵",
+    "codes": [
+      "1341"
+    ],
+    "tags": [
+      "感染症",
+      "飼料"
+    ],
+    "news": [
+      {
+        "title": "卵卸値の高騰に一服感 鳥インフルによる供給難が緩和、店頭なお高く",
+        "source": "日本経済新聞",
+        "date": "2026-04-08",
+        "url": "https://www.nikkei.com/article/DGXZQOUB3171P0R30C26A3000000/",
+        "paid": true
+      }
+    ]
+  },
+  "dairy": {
+    "label": "牛乳・バター",
+    "codes": [
+      "1303",
+      "1321"
+    ],
+    "tags": [
+      "飼料",
+      "生産・供給"
+    ],
+    "news": [
+      {
+        "title": "余る生乳、進まぬ減産 牛乳値上げで崩れた需給バランス",
+        "source": "日本経済新聞",
+        "date": "2026-09-10",
+        "url": "https://www.nikkei.com/article/DGXZQOUB2677H0W6A620C2000000/",
+        "paid": true
+      }
+    ]
+  },
+  "vegetables": {
+    "label": "キャベツ・たまねぎ",
+    "codes": [
+      "1401",
+      "1417"
+    ],
+    "tags": [
+      "天候・気候"
+    ],
+    "news": [
+      {
+        "title": "キャベツ3割高、猛暑で生育不良 農水省小売価格調査",
+        "source": "日本経済新聞",
+        "date": "2026-08-12",
+        "url": "https://www.nikkei.com/article/DGXZQOUB125HT0S6A810C2000000/",
+        "paid": true
+      },
+      {
+        "title": "春なのに下がらないじゃがいも・たまねぎ――昨夏の北海道が今の食卓に影を落とす仕組み",
+        "source": "FPトレンディ",
+        "date": "2026-04-04",
+        "url": "https://www.fptrendy.com/2026/04/01/spring-potato-onion-prices-hokkaido-impact/"
+      }
+    ]
+  },
+  "fish": {
+    "label": "さけ・まぐろ",
+    "codes": [
+      "1106",
+      "1101"
+    ],
+    "tags": [
+      "輸入・為替",
+      "世界相場"
+    ],
+    "news": [
+      {
+        "title": "満たせ世界の「サーモン腹」、国産養殖に商機 スシローは調達5割増",
+        "source": "日本経済新聞",
+        "date": "2026-05-27",
+        "url": "https://www.nikkei.com/article/DGXZQOFC291CJ0Z20C26A4000000/",
+        "paid": true
+      },
+      {
+        "title": "マグロの初競りで史上最高値の5億円超―豊洲 : 1キロあたり210万円、すし1貫で2～3万円！？",
+        "source": "nippon.com",
+        "date": "2026-01-05",
+        "url": "https://www.nippon.com/ja/japan-data/h02660/"
+      }
+    ]
+  },
+  "cooking_oil": {
+    "label": "食用油",
+    "codes": [
+      "1601"
+    ],
+    "tags": [
+      "輸入・為替",
+      "世界相場"
+    ],
+    "news": [
+      {
+        "title": "日清オイリオ、「キャノーラ油」など最大15%値上げ 6月から",
+        "source": "日本経済新聞",
+        "date": "2026-04-20",
+        "url": "https://www.nikkei.com/article/DGXZQOUC204PS0Q6A420C2000000/",
+        "paid": true
+      },
+      {
+        "title": "日清オイリオグループ／食用油最大21％値上げ、中東情勢と物流費高騰など要因に",
+        "source": "LNEWS",
+        "date": "2026-04-22",
+        "url": "https://www.lnews.jp/2026/04/s0422705.html"
+      }
+    ]
+  },
+  "chocolate": {
+    "label": "チョコレート",
+    "codes": [
+      "1761"
+    ],
+    "tags": [
+      "天候・気候",
+      "世界相場"
+    ],
+    "news": [
+      {
+        "title": "「カカオ離れ」で豆2年5カ月ぶり安値、チョコ値下がり早くて半年後",
+        "source": "日本経済新聞",
+        "date": "2026-02-10",
+        "url": "https://www.nikkei.com/article/DGXZQOUB286H50Y6A120C2000000/",
+        "paid": true
+      }
+    ]
+  },
+  "coffee": {
+    "label": "コーヒー",
+    "codes": [
+      "1922",
+      "1921"
+    ],
+    "tags": [
+      "天候・気候",
+      "世界相場"
+    ],
+    "news": [
+      {
+        "title": "コーヒー豆、約2週ぶり安値 ブラジルでの豊作受け",
+        "source": "日本経済新聞",
+        "date": "2026-04-17",
+        "url": "https://www.nikkei.com/article/DGXZQOUB176310X10C26A4000000/",
+        "paid": true
+      },
+      {
+        "title": "家庭用コーヒー製品の価格改定について",
+        "source": "キーコーヒー",
+        "date": "2025-12-12",
+        "url": "https://www.keycoffee.co.jp/news/detail/news_251212"
+      },
+      {
+        "title": "業務用、家庭用レギュラーコーヒー製品の一部価格改定について",
+        "source": "UCC上島珈琲",
+        "date": "2025-12-22",
+        "url": "https://www.ucc.co.jp/company/news/2025/rel251222.html"
+      }
+    ]
+  }
+}
