@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>献立物価シミュレーター | OpenGov CPI 食材価格比較</title>
+    <title>献立物価シミュレーター（試作・参考値） | 食料物価ウォッチ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -70,7 +70,7 @@
                             献立物価シミュレーター
                             <span class="text-xs bg-orange-100 text-orange-700 font-semibold px-2.5 py-0.5 rounded-full">2020 vs 2026</span>
                         </h1>
-                        <p class="text-xs text-slate-500 hidden sm:block">OpenGov.jp 小売物価統計調査・消費者物価指数（CPI）参照</p>
+                        <p class="text-xs text-slate-500 hidden sm:block">試作・参考値（価格は公式統計ではありません）</p>
                     </div>
                 </div>
                 <div class="flex items-center space-x-2">
@@ -87,6 +87,14 @@
 
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
+        <p class="text-sm mb-3"><a href="/" class="text-blue-700 hover:underline">← 食料物価ウォッチ（食料の物価指数）へ戻る</a></p>
+
+        <!-- 試作であることの注意書き -->
+        <div class="border-2 border-amber-400 bg-amber-50 text-amber-900 rounded-xl p-4 mb-6 text-sm leading-relaxed" role="note">
+            <p class="font-bold mb-1"><i class="fa-solid fa-triangle-exclamation"></i> 試作・参考値です</p>
+            <p>このページの食材価格（2020年・2026年）は、生成AIで作成した目安の数字です。総務省「小売物価統計調査」「消費者物価指数」などの公表値ではありません。計算結果は献立コストの変化をイメージするための参考としてご覧ください。</p>
+        </div>
+
         <!-- Top Information Banner -->
         <div class="bg-gradient-to-r from-orange-500 to-amber-600 rounded-2xl p-4 sm:p-6 text-white shadow-lg mb-6 relative overflow-hidden">
             <div class="absolute -right-8 -bottom-8 opacity-15 pointer-events-none">
@@ -98,7 +106,7 @@
                 </div>
                 <h2 class="text-xl sm:text-2xl font-bold mb-2">あの料理、今はいくらで作れる？</h2>
                 <p class="text-sm opacity-90 leading-relaxed">
-                    2020年の基準価格と2026年の最新CPI（消費者物価指数）データを基に、手作り料理や定番献立のコスト変化をリアルタイム計算。値上がりの影響が大きい食材が一目で分かります。
+                    2020年と2026年の食材の目安価格（参考値）を基に、手作り料理や定番献立のコスト変化を計算します。
                 </p>
             </div>
         </div>
@@ -175,7 +183,7 @@
                                     <div class="text-lg font-bold text-slate-200" id="total-2020">¥0</div>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-xs text-slate-400 block font-medium">2026年 CPI推計価格</span>
+                                    <span class="text-xs text-slate-400 block font-medium">2026年 目安価格（参考値）</span>
                                     <div class="text-xl font-extrabold text-amber-400" id="total-2026">¥0</div>
                                 </div>
                             </div>
@@ -269,8 +277,8 @@
 
     <footer class="bg-white border-t border-slate-200 py-6 mt-12 text-slate-500 text-xs">
         <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
-            <p>Data Source: 総務省「小売物価統計調査」・「消費者物価指数（CPI全国月次）」データ参照整理（OpenGov.jp CPI API/Open Data）</p>
-            <p class="text-slate-400">※ 各価格は全国平均基準単価および消費者物価指数による推定小売価格です。地域やスーパーのセール状況により実際の価格とは異なる場合があります。</p>
+            <p>価格データ：生成AIで作成した参考値です。総務省「小売物価統計調査」「消費者物価指数」などの公表値ではありません（公式統計への置き換えは今後検討）。</p>
+            <p class="text-slate-400">※ 実際の価格は、地域や店舗、時期によって大きく異なります。</p>
         </div>
     </footer>
 
