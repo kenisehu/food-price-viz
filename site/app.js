@@ -3,24 +3,18 @@ const app = document.getElementById("app");
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
-let data, byCode, children, first, latestIdx, newsByCode;
-let data, byCode, children, first, latestIdx, imports;
+let data, byCode, children, first, latestIdx, imports, newsByCode;
 let mainChart, navChart;
 
 setupTheme();
 
-ｂ// 関連ニュースは任意。読めなくても本体の表示は止めない
-const newsReq = fetch("data/news.json")
-  .then((r) => (r.ok ? r.json() : {}))
-  .catch(() => ({}));
-
-Promise.all([fetch("data/cpi_food.json").then((r) => r.json()), newsReq])
-  .then(([json, news]) => {
+// 輸入先・関連ニュースは任意。読めなくても本体の表示は止めない
 Promise.all([
   fetch("data/cpi_food.json").then((r) => r.json()),
   fetch("data/import_sources.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+  fetch("data/news.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
 ])
-  .then(([json, importJson]) => {
+  .then(([json, importJson, news]) => {
     data = json;
     imports = importJson;
     byCode = Object.fromEntries(data.nodes.map((n) => [n.code, n]));
