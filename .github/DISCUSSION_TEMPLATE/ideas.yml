@@ -1,0 +1,48 @@
+title: "[提案] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        サイト（https://food-price-viz.vercel.app）の改善案を書いてください。
+        **1つの投稿につき、変えたいことは1つ**にしてください。
+  - type: textarea
+    id: what
+    attributes:
+      label: 変えたいこと
+      description: 1つだけ。できるだけ具体的に。
+      placeholder: 例）上昇率ランキングから「米類」のような分類を除き、品目だけにする
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: なぜ変えたいか
+      description: 誰が、何に困っているか。
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: どのページのどこか
+      placeholder: 例）食料トップ（#/）の「上昇率上位」の表
+    validations:
+      required: true
+  - type: textarea
+    id: counter
+    attributes:
+      label: この案への一番強い反論と、考えを変える条件
+      description: どうなったらこの案を取り下げるか。
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 根拠・出典（あれば）
+      description: 数字や事実を書いた場合は、必ず出典URLを付けてください。
+  - type: input
+    id: ai
+    attributes:
+      label: 使ったAI
+      placeholder: 例）ChatGPT（ブラウザ）で整理 → 自分で確認・修正 ／ 使っていない
+    validations:
+      required: true
